@@ -92,7 +92,7 @@ export default function Home() {
   {/* Text container */}
   <div className="relative z-10 w-full max-w-2xl px-4 md:px-8 text-center">
     <h1 className="text-5xl sm:text-6xl font-extrabold text-white mb-4 drop-shadow-xl tracking-tight">
-      Top-Tier Business Strategy <br /> Without the Consulting Price Tag
+      Top-Tier Business Strategy  <br /> Without the Consulting Price Tag
     </h1>
     <p className="text-xl sm:text-2xl text-white font-semibold drop-shadow-md mb-6">
       Use proven frameworks and guided analysis to shape your next big idea 
