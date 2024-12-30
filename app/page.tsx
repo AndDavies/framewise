@@ -147,6 +147,9 @@ export default function Home() {
           <a href="#features" className="text-white font-semibold hover:text-yellow-300">
             Features
           </a>
+          <a href="#blog" className="text-white font-semibold hover:text-yellow-300">
+            Blog
+          </a>
           <a href="#faq" className="text-white font-semibold hover:text-yellow-300">
             FAQ
           </a>
@@ -175,73 +178,73 @@ export default function Home() {
             current business.
           </p>
 
-          {/* SIGN-UP FORM */}
-          <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <div className="relative">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email here"
+            {/* SIGN-UP FORM */}
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="relative">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Your email here"
+                  className="
+                    w-64 sm:w-80 
+                    bg-gray-800 
+                    text-white 
+                    placeholder-gray-400
+                    border border-white 
+                    px-6 py-3
+                    rounded-full
+                    focus:outline-none
+                    focus:border-yellow-400
+                    transition-colors
+                  "
+                  required
+                />
+              </div>
+              <button
+                type="submit"
                 className="
-                  w-64 sm:w-80 
-                  bg-gray-800 
-                  text-white 
-                  placeholder-gray-400
-                  border border-white 
+                  bg-orange-500
+                  text-white
+                  font-bold
                   px-6 py-3
                   rounded-full
-                  focus:outline-none
-                  focus:border-yellow-400
+                  hover:bg-orange-600
                   transition-colors
+                  flex
+                  items-center
+                  justify-center
+                  gap-2
                 "
-                required
-              />
-            </div>
-            <button
-              type="submit"
-              className="
-                bg-orange-500
-                text-white
-                font-bold
-                px-6 py-3
-                rounded-full
-                hover:bg-orange-600
-                transition-colors
-                flex
-                items-center
-                justify-center
-                gap-2
-              "
-              disabled={loading}
-            >
-              {loading ? (
-                <>
-                  <Spinner />
-                  Processing...
-                </>
-              ) : (
-                <>Subscribe &rarr;</>
-              )}
-            </button>
-          </form>
+                disabled={loading}
+              >
+                {loading ? (
+                  <>
+                    <Spinner />
+                    Processing...
+                  </>
+                ) : (
+                  <>Subscribe &rarr;</>
+                )}
+              </button>
+            </form>
 
-          {/* Feedback message */}
-          {feedback && (
-            <div
-              className={`mt-4 font-semibold text-sm ${
-                feedback.isError ? "text-red-400" : "text-green-300"
-              }`}
-            >
-              {feedback.message}
-            </div>
-          )}
-        </div>
+            {/* Feedback message */}
+            {feedback && (
+              <div
+                className={`mt-4 font-semibold text-sm ${
+                  feedback.isError ? "text-red-400" : "text-green-300"
+                }`}
+              >
+                {feedback.message}
+              </div>
+            )}
+          </div>
       </section>
 
       {/* HOW IT WORKS SECTION */}
       <div className="how-it-works-section py-12 bg-white" id="how-it-works">
-        <h2 className="text-4xl font-extrabold text-center mb-10 text-gray-900">How It Works</h2>
+        <h3 className="text-5xl md:text-4xl font-extrabold mb-4 text-center text-gray-900">How It Works</h3>
 
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full">
@@ -488,6 +491,48 @@ export default function Home() {
               <p className="text-base text-gray-600 leading-normal">
                 Join a network of innovators and business owners, and receive helpful tips from experts along the way.
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Blog */}
+      <div className="how-it-works-section py-12 bg-white" id="blog">
+        <h2 className="text-4xl font-extrabold text-center mb-10 text-gray-900">Blog</h2>
+
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full">
+            {/* Step 1 */}
+            <div className="group bg-white rounded-lg p-8 text-center border-l-4 border-transparent hover:border-yellow-400 hover:shadow-md transition-all duration-300">
+              <div className="relative w-full h-[200px] mb-4">
+                <Image src="/blog/tam_sam_som.png" alt="Group" fill className="object-cover rounded-md" />
+              </div>
+                <a href="blog/tam-sam-som-market-sizing-triad" className="text-slate-900 text-2xl font-semibold hover:text-yellow-400">
+                  TAM, SAM, SOM: The Market-Sizing Triad That Tests Your Ambition
+                </a>
+
+            </div>
+
+            {/* Step 2 */}
+            <div className="group bg-white rounded-lg p-8 text-center border-l-4 border-transparent hover:border-yellow-400 hover:shadow-md transition-all duration-300">
+              <div className="relative w-full h-[200px] mb-4">
+                <Image src="/blog/swot_analysis.png" alt="Group" fill className="object-cover rounded-md" />
+              </div>
+                <a href="blog/swot-the-surprising-power-behind-four-simple-letters" className="text-slate-900 text-2xl font-semibold hover:text-yellow-400">
+                SWOT: The Surprising Power Behind Four Simple Letters
+                </a>
+
+            </div>
+
+            {/* Step 2 */}
+            <div className="group bg-white rounded-lg p-8 text-center border-l-4 border-transparent hover:border-yellow-400 hover:shadow-md transition-all duration-300">
+              <div className="relative w-full h-[200px] mb-4">
+                <Image src="/blog/porters_five_forces.png" alt="Group" fill className="object-cover rounded-md" />
+              </div>
+                <a href="blog/porters-five-forces-framework-for-modern-business-strategy-and-competitive-analysis" className="text-slate-900 text-2xl font-semibold hover:text-yellow-400">
+                Porter’s Five Forces: Why This Classic Framework Still Fuels Competitive Edge
+                </a>
+
             </div>
           </div>
         </div>
