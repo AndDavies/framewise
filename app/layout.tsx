@@ -5,9 +5,9 @@ import { ReactNode } from 'react'
 import Script from 'next/script'
 
 export const metadata = {
-  title: 'FrameWise - Bold & Professional Landing Page',
-  description: 'Next.js app using the new App Router',
-}
+  title: "FrameWise: AI Business Consultant for McKinsey-Level Insights",
+  description: "Leverage time-tested frameworks—like Porter’s 5 Forces and SWOT—at a fraction of the cost. FrameWise empowers solopreneurs, small businesses, and startups to validate ideas, refine strategy, and scale with accessible AI-driven consulting.",
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
