@@ -285,7 +285,91 @@ export default function Home() {
           </div>
         </div>
       </div>
+            {/* FEATURES OVERVIEW SECTION */}
+      <div className="features-overview-section py-12 bg-gray-50" id="features">
+        <h2 className="text-4xl font-extrabold text-center mb-10 text-gray-900">Features Overview</h2>
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
+            {/* FEATURE 1 */}
+            <div className="group relative bg-white rounded-lg p-8 hover:shadow-xl transition-all duration-300">
+              <div className="relative w-16 h-16 mb-4 mx-auto">
+                <div className="absolute inset-0 rounded-full bg-yellow-300 opacity-80" />
+                <Image
+                  src="/icons/group.png"
+                  alt="On-Demand Frameworks Icon"
+                  fill
+                  className="object-contain p-2 relative"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-2 text-gray-800 group-hover:text-yellow-500 transition-colors duration-300">
+                On-Demand Frameworks
+              </h3>
+              <p className="text-base text-gray-600 leading-normal">
+                Easily access proven strategic frameworks to develop your next business idea or optimize an existing
+                one.
+              </p>
+            </div>
 
+            {/* FEATURE 2 */}
+            <div className="group relative bg-white rounded-lg p-8 hover:shadow-xl transition-all duration-300">
+              <div className="relative w-16 h-16 mb-4 mx-auto">
+                <div className="absolute inset-0 rounded-full bg-yellow-300 opacity-80" />
+                <Image
+                  src="/icons/brainstorm.png"
+                  alt="Interactive Canvas Icon"
+                  fill
+                  className="object-contain p-2 relative"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-2 text-gray-800 group-hover:text-yellow-500 transition-colors duration-300">
+                Interactive Canvas for Brainstorming
+              </h3>
+              <p className="text-base text-gray-600 leading-normal">
+                Collaborate visually and structure ideas to reach deeper insights and creative solutions.
+              </p>
+            </div>
+
+            {/* FEATURE 3 */}
+            <div className="group relative bg-white rounded-lg p-8 hover:shadow-xl transition-all duration-300">
+              <div className="relative w-16 h-16 mb-4 mx-auto">
+                <div className="absolute inset-0 rounded-full bg-yellow-300 opacity-80" />
+                <Image
+                  src="/icons/rocket.png"
+                  alt="AI-Powered Insights Icon"
+                  fill
+                  className="object-contain p-2 relative"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-2 text-gray-800 group-hover:text-yellow-500 transition-colors duration-300">
+                AI-Powered Insights
+              </h3>
+              <p className="text-base text-gray-600 leading-normal">
+                Get real-time, data-backed feedback to refine your strategic approach and outmaneuver competitors.
+              </p>
+            </div>
+
+            {/* FEATURE 4 */}
+            <div className="group relative bg-white rounded-lg p-8 hover:shadow-xl transition-all duration-300">
+              <div className="relative w-16 h-16 mb-4 mx-auto">
+                <div className="absolute inset-0 rounded-full bg-yellow-300 opacity-80" />
+                <Image
+                  src="/icons/heads.png"
+                  alt="Community & Support Icon"
+                  fill
+                  className="object-contain p-2 relative"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-2 text-gray-800 group-hover:text-yellow-500 transition-colors duration-300">
+                Community & Support
+              </h3>
+              <p className="text-base text-gray-600 leading-normal">
+                Join a network of innovators and business owners, and receive helpful tips from experts along the way.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       {/* WHY IT MATTERS SECTION */}
       <section className="w-full bg-[rgb(22,23,26)] text-gray-300 py-16 px-4" id="why-this-matters">
         {/* Container */}
@@ -411,90 +495,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FEATURES OVERVIEW SECTION */}
-      <div className="features-overview-section py-12 bg-gray-50" id="features">
-        <h2 className="text-4xl font-extrabold text-center mb-10 text-gray-900">Features Overview</h2>
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
-            {/* FEATURE 1 */}
-            <div className="group relative bg-white rounded-lg p-8 hover:shadow-xl transition-all duration-300">
-              <div className="relative w-16 h-16 mb-4 mx-auto">
-                <div className="absolute inset-0 rounded-full bg-yellow-300 opacity-80" />
-                <Image
-                  src="/icons/group.png"
-                  alt="On-Demand Frameworks Icon"
-                  fill
-                  className="object-contain p-2 relative"
-                />
-              </div>
-              <h3 className="text-2xl font-bold mb-2 text-gray-800 group-hover:text-yellow-500 transition-colors duration-300">
-                On-Demand Frameworks
-              </h3>
-              <p className="text-base text-gray-600 leading-normal">
-                Easily access proven strategic frameworks to develop your next business idea or optimize an existing
-                one.
-              </p>
-            </div>
-
-            {/* FEATURE 2 */}
-            <div className="group relative bg-white rounded-lg p-8 hover:shadow-xl transition-all duration-300">
-              <div className="relative w-16 h-16 mb-4 mx-auto">
-                <div className="absolute inset-0 rounded-full bg-yellow-300 opacity-80" />
-                <Image
-                  src="/icons/brainstorm.png"
-                  alt="Interactive Canvas Icon"
-                  fill
-                  className="object-contain p-2 relative"
-                />
-              </div>
-              <h3 className="text-2xl font-bold mb-2 text-gray-800 group-hover:text-yellow-500 transition-colors duration-300">
-                Interactive Canvas for Brainstorming
-              </h3>
-              <p className="text-base text-gray-600 leading-normal">
-                Collaborate visually and structure ideas to reach deeper insights and creative solutions.
-              </p>
-            </div>
-
-            {/* FEATURE 3 */}
-            <div className="group relative bg-white rounded-lg p-8 hover:shadow-xl transition-all duration-300">
-              <div className="relative w-16 h-16 mb-4 mx-auto">
-                <div className="absolute inset-0 rounded-full bg-yellow-300 opacity-80" />
-                <Image
-                  src="/icons/rocket.png"
-                  alt="AI-Powered Insights Icon"
-                  fill
-                  className="object-contain p-2 relative"
-                />
-              </div>
-              <h3 className="text-2xl font-bold mb-2 text-gray-800 group-hover:text-yellow-500 transition-colors duration-300">
-                AI-Powered Insights
-              </h3>
-              <p className="text-base text-gray-600 leading-normal">
-                Get real-time, data-backed feedback to refine your strategic approach and outmaneuver competitors.
-              </p>
-            </div>
-
-            {/* FEATURE 4 */}
-            <div className="group relative bg-white rounded-lg p-8 hover:shadow-xl transition-all duration-300">
-              <div className="relative w-16 h-16 mb-4 mx-auto">
-                <div className="absolute inset-0 rounded-full bg-yellow-300 opacity-80" />
-                <Image
-                  src="/icons/heads.png"
-                  alt="Community & Support Icon"
-                  fill
-                  className="object-contain p-2 relative"
-                />
-              </div>
-              <h3 className="text-2xl font-bold mb-2 text-gray-800 group-hover:text-yellow-500 transition-colors duration-300">
-                Community & Support
-              </h3>
-              <p className="text-base text-gray-600 leading-normal">
-                Join a network of innovators and business owners, and receive helpful tips from experts along the way.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Blog */}
       <div className="how-it-works-section py-12 bg-white" id="blog">
