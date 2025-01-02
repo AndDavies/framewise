@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.framewisehq.com
+
+# Sitemaps
+Sitemap: https://www.framewisehq.com/sitemap.xml

@@ -2,7 +2,24 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import FaqSection from "./components/FaqSection";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
+
+import Navbar from "./components/Navbar";
+
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface FaqSectionProps {
+  faqItems: FAQItem[];
+}
 
 /** 
  * Simple spinner using Tailwind's animate-spin class
@@ -117,44 +134,8 @@ export default function Home() {
 
   return (
     <main className="scroll-smooth min-h-screen w-full bg-white text-gray-900 antialiased">
-      {/* NAVBAR */}
-      <nav
-        className={`fixed top-0 left-0 z-50 w-full flex items-center justify-between px-8 ${navHeight} ${navBackground} ${navTransition}`}
-      >
-        {/* LOGO + BRAND NAME */}
-        <div className="flex items-center space-x-3">
-          <Image
-            src="/landing/logo_white_trans.png"
-            alt="FrameWise Logo"
-            width={200}
-            height={200}
-            priority
-            className={`object-contain ${navLogoSize} ${navTransition}`}
-          />
-          {/* <span className={`text-white font-extrabold text-2xl ${navTransition}`}>
-            FrameWise
-          </span> */}
-        </div>
-
-        {/* NAV LINKS */}
-        <div className="flex space-x-6">
-          <a href="#how-it-works" className="text-white font-semibold hover:text-yellow-300">
-            How It Works
-          </a>
-          <a href="#why-this-matters" className="text-white font-semibold hover:text-yellow-300">
-            Why This Matters
-          </a>
-          <a href="#features" className="text-white font-semibold hover:text-yellow-300">
-            Features
-          </a>
-          <a href="#blog" className="text-white font-semibold hover:text-yellow-300">
-            Blog
-          </a>
-          <a href="#faq" className="text-white font-semibold hover:text-yellow-300">
-            FAQ
-          </a>
-        </div>
-      </nav>
+      
+      <Navbar />
 
       {/* HERO SECTION */}
       <section
@@ -543,7 +524,24 @@ export default function Home() {
       <div className="faq-section bg-gray-900 text-white py-12 px-6" id="faq">
         
         <h1 className="text-2xl font-bold mb-6">Frequently Asked Questions</h1>
-        <FaqSection faqItems={faqItems} />
+        <div className="w-full max-w-4xl mx-auto">
+          <Accordion type="single" collapsible className="space-y-6">
+            {faqItems.map((item, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="border-b border-gray-600"
+              >
+                <AccordionTrigger className="text-lg font-extrabold text-gray-300 hover:text-yellow-500 transition-all duration-300">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="mt-4 pl-4 text-gray-100 text-base bg-gray-800 rounded-lg p-4 border border-gray-700 shadow-lg transition-all duration-300 ease-in-out">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </main>
   );
